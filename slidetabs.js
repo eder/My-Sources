@@ -13,42 +13,42 @@
 	$.slideTabs = function(options, elem){
 			
 		var padrao = {
-			seletor: '.slide',									//Seletor padrão/geral, usado caso use o plugin sem o seletor $.plugin
-			seletorAreaPainel: '.slide-conteudo',				//Seletor para área do painel..necessário para wrapInner()
-			seletorPainel:	'.painel',							//Seletor para o painel ou os slides
-			seletorMiniatura: '.miniatura',						//Seletor de miniaturas
-			seletorAnterior: '.anterior',						//Seletor botão anterior
-			seletorProximo: '.proximo',							//Seletor botão proximo
+			seletor: '.slide',							//Seletor padrão/geral, usado caso use o plugin sem o seletor $.plugin
+			seletorAreaPainel: '.slide-conteudo',			//Seletor para área do painel..necessário para wrapInner()
+			seletorPainel:	'.painel',					//Seletor para o painel ou os slides
+			seletorMiniatura: '.miniatura',				//Seletor de miniaturas
+			seletorAnterior: '.anterior',					//Seletor botão anterior
+			seletorProximo: '.proximo',					//Seletor botão proximo
 			
-			classeMiniaturaAtual: 'slide-miniatura-atual', 		//Classe para a miniatura atual | Classe adicionada pelo plugin
+			classeMiniaturaAtual: 'slide-miniatura-atual', 	//Classe para a miniatura atual | Classe adicionada pelo plugin
 			classePainelAtual: 'slide-painel-atual',			//Classe para o painel atual | Classe adicionada pelo plugin
 			classePainelPrimeiro: 'slide-painel-primeiro',		//Classe para o primeiro painel | Classe adicionada pelo plugin
-			classePainelUltimo: 'slide-painel-ultimo',			//Classe para o ultimo painel | Classe adicionada pelo plugin
-			classePainelConteudo: 'slide-painel-conteudo',		//Classe para "cercar" os painel do plugin | Classe adicionada pelo plugin
+			classePainelUltimo: 'slide-painel-ultimo',		//Classe para o ultimo painel | Classe adicionada pelo plugin
+			classePainelConteudo: 'slide-painel-conteudo',	//Classe para "cercar" os painel do plugin | Classe adicionada pelo plugin
 			
-			eventoMiniatura: 'click',							//Evento para disparar o plugin nas miniaturas
-			eventoSeta: 'click',								//Evento para disparar o plugin não botões/setas próximo e anterior
+			eventoMiniatura: 'click',					//Evento para disparar o plugin nas miniaturas
+			eventoSeta: 'click',						//Evento para disparar o plugin não botões/setas próximo e anterior
 			
-			inicial: 1,											//Slide inicial
-			continuo: true, 									//Quando chega no ultimo o proximo será o 1º?
+			inicial: 1,								//Slide inicial
+			continuo: true, 							//Quando chega no ultimo o proximo será o 1º?
 			
-			auto: false, 										//Troca de slide automaticamente?
-			pausa: 2000, 										//Tempo entre cada pausa para o slide automático
+			auto: false, 							//Troca de slide automaticamente?
+			pausa: 2000, 							//Tempo entre cada pausa para o slide automático
 			
-			tempo: 'normal',									//Tempo para cada transicão / 0(Zero) para sem animação
-			easing: 'swing',									//Animação com easyng na entrada (IN)...
+			tempo: 'normal',							//Tempo para cada transicão / 0(Zero) para sem animação
+			easing: 'swing',							//Animação com easyng na entrada (IN)...
 			
-			alturaAutomatica: false,							//Ajustar automaticamente a altura do slide, caso false ficará com o tamanho especificado no css ou no painel maior
-			margin: true,										//Considerar a margin juntamente com o tamanho do elemento
+			alturaAutomatica: false,					//Ajustar automaticamente a altura do slide, caso false ficará com o tamanho especificado no css ou no painel maior
+			margin: true,							//Considerar a margin juntamente com o tamanho do elemento
 			
-			scroll: 1,											//Nº de elementos que serão arastados
-			visiveis: 1,										//Nº de elementos visiveis
-			direcao: 'x',										//Direção para o slide, X(horizontal) ou Y(vertical)
+			scroll: 1,								//Nº de elementos que serão arastados
+			visiveis: 1,								//Nº de elementos visiveis
+			direcao: 'x',							//Direção para o slide, X(horizontal) ou Y(vertical)
 				
-			onSlide: null,										//Callback
+			onSlide: null,							//Callback
 			
-			live: false,										//Abilitar o monitoramento live
-			liveTempo: 100										//Tempo entra cada checagem, em milisegundos
+			live: false,								//Abilitar o monitoramento live
+			liveTempo: 100							//Tempo entra cada checagem, em milisegundos
 			
 		};
 		var o = $.extend(padrao, options),
