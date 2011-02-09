@@ -1,6 +1,7 @@
 /**
- * Slidetabs 0.1
- Autho Eder Eduardo, e-mail  eder.esilva@gmail.com
+ * Slidetabs 0.2
+ Author Eder Eduardo, e-mail  eder.esilva@gmail.com
+ Author Toni Melo 
  
  */
 (function($){
