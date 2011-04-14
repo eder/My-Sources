@@ -1,8 +1,8 @@
- # Criar URLs reduzidas
- # @author  Eder Eduardo <eder.esilva@gmail.com>
- # @version  0.0.1 
- # @param   string url parametro com a URL original
- # @return  string  retorna a url reduzida pelo bit.ly
+# Criar URLs reduzidas
+# @author  Eder Eduardo <eder.esilva@gmail.com>
+# @version  0.0.1 
+# @param   string url parametro com a URL original
+# @return  string  retorna a url reduzida pelo bit.ly
 require 'rubygems'
 require 'json'
 require 'net/http'
@@ -21,14 +21,14 @@ def BitUrl (url)
   result    = JSON.parse(data)
   # Verifica se a conexão foi bem sucedida 
   status    = result['statusCode'] 
-    if status == "OK" then
-        return result['results'][url]['shortUrl']
-  #Caso ocorra algum erro mostra a messagem de erro	
-    else 
-      print "Não foi possivel abrir o bit.ly verifique os dados de acesso."
-    end   
-      
-  
+  if status == "OK" then
+    return result['results'][url]['shortUrl']
+    #Caso ocorra algum erro mostra a messagem de erro	
+  else 
+    print "Não foi possivel abrir o bit.ly verifique os dados de acesso."
+  end   
+
+
 end  
 # Exemplo de como usar a função. #
 link = "http://edereduardo.wordpress.com/2010/10/17/ruby-e-bit-ly-funcao-para-encutar-url/"
