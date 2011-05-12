@@ -1,0 +1,33 @@
+stdClass Object
+(
+    [return] => Array
+        (
+            [0] => stdClass Object
+                (
+                    [instrumentos] => stdClass Object
+                        (
+                            [assinatura] => 11/12/2008
+                            [atividade] => PAPEL, PAPELÃO E CORTIÇA
+                            [clausulas] => Array
+                                (
+                                    [0] => stdClass Object
+                                        (
+                                            [comparativo] => I
+                                            [dataCadastramento] => 06/04/2010
+                                            [dataUltimaAtualizacao] => 06/04/2010
+                                            [detalhe] => 
+                                            [fimVigencia] => 30/09/2009
+                                            [grupo] => Reajuste / Correção Salarial
+                                            [idInstrumento] => 1270582754334
+                                            [inicioVigencia] => 01/10/2008
+                                            [numero] => 001
+                                            [observacao] => 
+                                            [palavrasChave] => reajuste, remuneração
+                                            [selecionada] => false
+                                            [tema] => SALÁRIO E REMUNERAÇÃO
+                                            [texto] => 
+REAJUSTE SALARIAL  Os salários dos empregados admitidos até 01 de outubro de 2007, serão reajustados em 8,0%, a partir de 01 de outubro de 2008, sobre os salários de setembro de 2008. 
+
+  
+                                            [tipo] => Reajuste Salarial
+                                        )
