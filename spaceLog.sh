@@ -41,7 +41,7 @@ echo  "[${Day}-${Time}] - [Space occupied in directory]- ${size}  [Space Free] -
 if [ -d $path ] # Verifica existe o diretório  /va/log/regs/ na variavel $path 
 	then
 	getSizeLog $directory $fileLog
-else   # Se o diretorio não existir cria o diretorio indicato na variavel
+else   # Se o diretorio não existir cria o diretorio indicado na variavel
 	mkdir -p $path
 	getSizeLog $directory $fileLog
 fi
