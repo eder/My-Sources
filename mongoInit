@@ -4,7 +4,7 @@
 #Twitter: @edereduardo
 #github: http://github.com/eder
 #Mongo init
-#Version 0.0.3
+#Version 0.0.1
 #date 17.10.11
 
 	pid=`ps -e -o pid,command | grep [m]ongodb | sed 's/[ \/a-z-]//g'` 
