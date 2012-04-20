@@ -1,0 +1,32 @@
+#!/bin/sh
+#Autor:		Eder Eduardo
+#E-mail: 	eder.esilva@gmail.com
+#Twitter: @edereduardo
+#github: http://github.com/eder
+#Mongo init
+#Version 0.0.1
+#date 17.10.11
+
+	pid=`ps -e -o pid,command | grep [m]ongodb | sed 's/[ \/a-z-]//g'` 
+case $1 in
+	start)
+	echo "Starting Service Mongodb"
+	DAEMON="/usr/local/bin/mongod run --config /usr/local/Cellar/mongodb/2.0.0-x86_64/mongod.conf"
+	nohup $DAEMON &
+	[ -d /var/run/mongo ] || mkdir -p /var/run/mongo
+	echo "${pid}">>/var/run/mongo/mongo.pid
+	echo "."
+	;;
+
+	stop)
+	echo "Stoping Mongo"
+	kill -s kill $pid
+	rm -rf /var/run/mongo/mongo.pid
+	;;
+
+	*)
+	echo "Type start or stop to start/stop"
+	exit 1
+	;;
+
+esac

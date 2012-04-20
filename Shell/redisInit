@@ -1,0 +1,32 @@
+#!/bin/sh
+#Autor:		Eder Eduardo
+#E-mail: 	eder.esilva@gmail.com
+#Twitter: @edereduardo
+#github: http://github.com/eder
+#initRedis 
+#Version 0.0.3
+#date 14.04.11
+
+	pid=`ps -e -o pid,command | grep [r]edis-server | sed 's/[ \/a-z-]//g'` 
+case $1 in
+	start)
+	echo "Starting Redis..."
+	DAEMON="/usr/local/bin/redis-server"
+	nohup $DAEMON &
+	[ -d /var/run/redis ] || mkdir -p /var/run/redis 
+	echo "${pid}">>/var/run/redis/redis.pid
+	echo "."
+	;;
+
+	stop)
+	echo "Stoping Redis"
+	kill -s kill $pid
+	rm -rf /var/run/redis/redis.pid
+	;;
+
+	*)
+	echo "Type start or stop to start/stop"
+	exit 1
+	;;
+
+esac
