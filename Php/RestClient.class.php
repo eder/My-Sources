@@ -1,10 +1,4 @@
 <?
-
-/**
- * Class RestClient
- * Wraps HTTP calls using cURL, aimed for accessing and testing RESTful webservice. 
- * By Diogo Souza da Silva <manifesto@manifesto.blog.br>
- */
 class RestClient {
 
      private $curl ;
@@ -31,7 +25,7 @@ class RestClient {
      /**
       * Execute the call to the webservice
       * @return RestClient
-      */ 
+      */
      public function execute() {
          if($this->method === "POST") {
              curl_setopt($this->curl,CURLOPT_POST,true);
@@ -75,7 +69,7 @@ class RestClient {
 
      /*
       * Treats the Response for extracting the Headers and Response
-      */ 
+      */
      private function treatResponse($r) {
         if($r == null or strlen($r) < 1) {
             return;
@@ -111,7 +105,7 @@ class RestClient {
 
      /*
       * @return string
-      */ 
+      */
      public function getResponse() {
          return $this->response ;
      }
@@ -123,7 +117,7 @@ class RestClient {
      public function getResponseCode() {
          return (int) $this->headers['code'];
      }
-     
+
      /*
       * HTTP response message (Not Found, Continue, etc )
       * @return string
@@ -168,7 +162,7 @@ class RestClient {
       * @return RestClient
       */
      public function setUrl($url) {
-         $this->url = $url; 
+         $this->url = $url;
          return $this;
      }
 
@@ -250,10 +244,10 @@ class RestClient {
      /**
       * Convenience method wrapping a commom PUT call
       * @param string $url
-      * @param string $body 
+      * @param string $body
       * @param string $user=null [optional]
       * @param string $password=null [optional]
-      * @param string $contentType=null [optional] 
+      * @param string $contentType=null [optional]
       * @return RestClient
       */
      public static function put($url,$body,$user=null,$pwd=null,$contentType=null) {
@@ -288,10 +282,10 @@ class RestClient {
       * Convenience method wrapping a commom custom call
       * @param string $method
       * @param string $url
-      * @param string $body 
+      * @param string $body
       * @param string $user=null [optional]
       * @param string $password=null [optional]
-      * @param string $contentType=null [optional] 
+      * @param string $contentType=null [optional]
       * @return RestClient
       */
      public static function call($method,$url,$body,$user=null,$pwd=null,$contentType=null) {
